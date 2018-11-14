@@ -20,6 +20,7 @@ function directory(req, res) {
 function updateroot(req, res) {
     console.log(req.body);
     RootModel.findOneAndUpdate({ _id: req.body._id }, req.body, { new: true }, function (err, docs) {     
+       
         res.json(docs)
     });
 }
